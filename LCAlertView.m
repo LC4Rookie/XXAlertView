@@ -15,7 +15,7 @@
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
     //添加确定到UIAlertController中
-    UIAlertAction *action = [UIAlertAction actionWithTitle:[Kits versionLanguage:@"ok"] style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:action];
     dispatch_async(dispatch_get_main_queue(), ^{
         [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:alertController animated:YES completion:nil];
