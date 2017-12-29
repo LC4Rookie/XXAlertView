@@ -1,25 +1,25 @@
 //
-//  LCAlertView.h
-//  aaaaa
+//  XXAlertView.h
+//  Buchouyang
 //
-//  Created by Apple on 17/1/16.
-//  Copyright © 2017年 Apple. All rights reserved.
+//  Created by 宋林城 on 2017/12/29.
+//  Copyright © 2017年 Sinocode. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 /**
  按钮响应事件
-
+ 
  @param index 下标
  */
-typedef void(^LCActionHandler)(NSUInteger index);
+typedef void(^XXActionHandler)(NSUInteger index);
 
-@interface LCAlertView : UIAlertView
+@interface XXAlertView : NSObject
 
 /**
  弹出提示框
-
+ 
  @param message 提示信息
  */
 + (void)showSingleAlertViewWithMessage:(NSString *)message;
@@ -33,11 +33,11 @@ typedef void(^LCActionHandler)(NSUInteger index);
  */
 + (void)showSingleResponseAlertViewWithMessage:(NSString *)message
                                    actionTitle:(NSString *)actionTitle
-                                 actionHandler:(LCActionHandler)actionHandler;
+                                 actionHandler:(XXActionHandler)actionHandler;
 
 /**
  弹出提示框，点击返回下标
-
+ 
  @param type 提示框类型
  @param title 标题
  @param message 提示信息
@@ -48,6 +48,6 @@ typedef void(^LCActionHandler)(NSUInteger index);
                         title:(NSString *)title
                       message:(NSString *)message
                  actionTitles:(NSArray *)actionTitles
-                actionHandler:(LCActionHandler)actionHandler;
+                actionHandler:(XXActionHandler)actionHandler;
 
 @end

@@ -1,14 +1,14 @@
 //
-//  LCAlertView.m
-//  aaaaa
+//  XXAlertView.m
+//  Buchouyang
 //
-//  Created by Apple on 17/1/16.
-//  Copyright © 2017年 Apple. All rights reserved.
+//  Created by 宋林城 on 2017/12/29.
+//  Copyright © 2017年 Sinocode. All rights reserved.
 //
 
-#import "LCAlertView.h"
+#import "XXAlertView.h"
 
-@implementation LCAlertView
+@implementation XXAlertView
 
 /** 弹出提示框 */
 + (void)showSingleAlertViewWithMessage:(NSString *)message {
@@ -25,7 +25,7 @@
 /** 弹出单一响应按钮提示框，点击返回响应事件 */
 + (void)showSingleResponseAlertViewWithMessage:(NSString *)message
                                    actionTitle:(NSString *)actionTitle
-                                 actionHandler:(LCActionHandler)actionHandler {
+                                 actionHandler:(XXActionHandler)actionHandler {
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *action = [UIAlertAction actionWithTitle:actionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * action)  {
@@ -42,7 +42,7 @@
                         title:(NSString *)title
                       message:(NSString *)message
                  actionTitles:(NSArray *)actionTitles
-                actionHandler:(LCActionHandler)actionHandler{
+                actionHandler:(XXActionHandler)actionHandler{
     
     if (![actionTitles count]) {
         return;
